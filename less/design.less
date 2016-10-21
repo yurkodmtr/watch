@@ -40,6 +40,10 @@ h1 {
 	color:#fa0572;
 	font-size:40px;
 	line-height:40px;
+	@media screen and (max-width: 40em) {
+		font-size:30px;
+		line-height:30px;
+	}
 }
 h2 {
 	text-align:center;
@@ -48,6 +52,10 @@ h2 {
 	color:#000000;
 	font-size:30px;
 	line-height:36px;
+	@media screen and (max-width: 40em) {
+		font-size:26px;
+		line-height:30px;
+	}
 }
 
 
@@ -63,7 +71,10 @@ h2 {
 	background-size: cover;
 	background-image: url(../images/mainheader.jpg);
 
-	padding:76px 0px 45px 0px;
+	padding:76px 0px 25px 0px;
+	@media screen and (max-width: 40em) {
+		padding-top:25px;
+	}
 }
 
 .mainheader {
@@ -80,6 +91,10 @@ h2 {
 					font-size:18px;
 					text-transform:uppercase;
 				}
+				@media screen and (max-width: 40em) {
+					display:block;
+					margin:0px 0px 20px 0px;
+				}
 			}
 		}
 		.phone {
@@ -89,10 +104,17 @@ h2 {
 			color:#353535;
 			font-size:17px;
 			white-space:nowrap;
+			@media screen and (max-width: 40em) {
+				white-space:normal;
+			}
 			span {
 				display:block;
 				margin-bottom:8px;
 				font-size:36px;
+			}
+			@media screen and (max-width: 64em) {
+				position:relative;
+				margin-bottom:30px;
 			}
 		}
 	}
@@ -101,12 +123,19 @@ h2 {
 .mainheader {
 	&__mid {
 		padding:207px 0px 80px 0px;
+		@media screen and (max-width: 40em) {
+			padding-top:30px;
+		}
 		text-align:center;		
 		.title {
 			margin-bottom:55px;			
 			color:#353535;
 			font-size:40px;
 			line-height:40px;
+			@media screen and (max-width: 40em) {
+				font-size:26px;
+				line-height:30px;
+			}
 		}	
 		.btn {
 			a {
@@ -133,11 +162,10 @@ h2 {
 			display:block;
 			li {
 				display:block;
-				float:left;
-				width:33.3%;
 				text-align:center;
 				color:#353535;
 				font-size:17px;
+				margin-bottom:20px;
 			}
 		}
 	}
@@ -151,15 +179,9 @@ h2 {
 
 /* catalog */
 .catalog {
-	.item {
-		float:left;
-		width:31.914893617%; /* 300 940 */
-		margin-right:2.127659574%; /* 20 940 */
+	.item { 
 		margin-bottom:30px;
 		text-align:center;
-		&:nth-child(3n) {
-			margin-right:0px;
-		}
 		figure {
 			text-align:center;
 			height:205px;
@@ -180,6 +202,9 @@ h2 {
 			}
 			.price {
 				padding-left:30px; 
+				@media screen and (max-width: 40em) {
+					
+				}
 				padding-right:10px;
 				border-right:1px solid #000;
 				text-align:right;
@@ -226,16 +251,10 @@ h2 {
 }
 
 /* save */
-.save {
+.save { 
 	.item {
-		float:left;
-		width:31.914893617%; /* 300 940 */
-		margin-right:2.127659574%; /* 20 940 */
 		margin-bottom:37px;
 		text-align:center;
-		&:nth-child(3n) {
-			margin-right:0px;
-		}
 		figure {
 			margin-bottom:20px;
 		}
@@ -286,6 +305,9 @@ h2 {
 	background-image: url(../images/review.jpg);
 
 	padding:120px 0px 80px 0px;
+	@media screen and (max-width: 40em) {
+		padding-top:80px;
+	}
 
 	.item {
 		text-align:center;
@@ -305,17 +327,37 @@ h2 {
 			color:#FFF;
 			font-size:30px;
 			line-height:40px;
+			@media screen and (max-width: 40em) {
+				font-size:24px;
+				line-height:30px;
+			}
 		}
 	}	
 }
 
 /* functions */
 .functions {
-	text-align:center;
+	text-align:center; 
 	.img {
 		display:inline-block;
 		max-width:100%;
 		margin-bottom:30px;
+	}
+}
+
+/* form */
+.form {
+	input {
+		border:1px solid grey;
+		&.error {
+			border:1px solid red;
+		}
+	}
+	.responce_ok {
+		display:none;
+	}
+	.responce_error {
+		display:none;
 	}
 }
 

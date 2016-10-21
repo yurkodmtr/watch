@@ -172,6 +172,12 @@ h1 {
   font-size: 40px;
   line-height: 40px;
 }
+@media screen and (max-width: 40em) {
+  h1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
 h2 {
   text-align: center;
   margin-bottom: 60px;
@@ -179,6 +185,12 @@ h2 {
   color: #000000;
   font-size: 30px;
   line-height: 36px;
+}
+@media screen and (max-width: 40em) {
+  h2 {
+    font-size: 26px;
+    line-height: 30px;
+  }
 }
 /* mainheader */
 .mainheader {
@@ -191,7 +203,12 @@ h2 {
   -o-background-size: cover;
   background-size: cover;
   background-image: url(../images/mainheader.jpg);
-  padding: 76px 0px 45px 0px;
+  padding: 76px 0px 25px 0px;
+}
+@media screen and (max-width: 40em) {
+  .mainheader {
+    padding-top: 25px;
+  }
 }
 .mainheader__top {
   text-align: center;
@@ -209,6 +226,12 @@ h2 {
   font-size: 18px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 40em) {
+  .mainheader__top .nav li {
+    display: block;
+    margin: 0px 0px 20px 0px;
+  }
+}
 .mainheader__top .phone {
   position: absolute;
   right: 0px;
@@ -217,20 +240,42 @@ h2 {
   font-size: 17px;
   white-space: nowrap;
 }
+@media screen and (max-width: 40em) {
+  .mainheader__top .phone {
+    white-space: normal;
+  }
+}
 .mainheader__top .phone span {
   display: block;
   margin-bottom: 8px;
   font-size: 36px;
 }
+@media screen and (max-width: 64em) {
+  .mainheader__top .phone {
+    position: relative;
+    margin-bottom: 30px;
+  }
+}
 .mainheader__mid {
   padding: 207px 0px 80px 0px;
   text-align: center;
+}
+@media screen and (max-width: 40em) {
+  .mainheader__mid {
+    padding-top: 30px;
+  }
 }
 .mainheader__mid .title {
   margin-bottom: 55px;
   color: #353535;
   font-size: 40px;
   line-height: 40px;
+}
+@media screen and (max-width: 40em) {
+  .mainheader__mid .title {
+    font-size: 26px;
+    line-height: 30px;
+  }
 }
 .mainheader__mid .btn a {
   display: inline-block;
@@ -256,11 +301,10 @@ h2 {
 }
 .mainheader__bottom ul li {
   display: block;
-  float: left;
-  width: 33.3%;
   text-align: center;
   color: #353535;
   font-size: 17px;
+  margin-bottom: 20px;
 }
 /* content */
 .block {
@@ -268,18 +312,8 @@ h2 {
 }
 /* catalog */
 .catalog .item {
-  float: left;
-  width: 31.914893617%;
-  /* 300 940 */
-
-  margin-right: 2.127659574%;
-  /* 20 940 */
-
   margin-bottom: 30px;
   text-align: center;
-}
-.catalog .item:nth-child(3n) {
-  margin-right: 0px;
 }
 .catalog .item figure {
   text-align: center;
@@ -305,6 +339,9 @@ h2 {
   padding-right: 10px;
   border-right: 1px solid #000;
   text-align: right;
+}
+@media screen and (max-width: 40em) {
+  
 }
 .catalog .item .descr .price span {
   display: block;
@@ -350,18 +387,8 @@ h2 {
 }
 /* save */
 .save .item {
-  float: left;
-  width: 31.914893617%;
-  /* 300 940 */
-
-  margin-right: 2.127659574%;
-  /* 20 940 */
-
   margin-bottom: 37px;
   text-align: center;
-}
-.save .item:nth-child(3n) {
-  margin-right: 0px;
 }
 .save .item figure {
   margin-bottom: 20px;
@@ -412,6 +439,11 @@ h2 {
   background-image: url(../images/review.jpg);
   padding: 120px 0px 80px 0px;
 }
+@media screen and (max-width: 40em) {
+  .review {
+    padding-top: 80px;
+  }
+}
 .review .item {
   text-align: center;
 }
@@ -434,6 +466,12 @@ h2 {
   font-size: 30px;
   line-height: 40px;
 }
+@media screen and (max-width: 40em) {
+  .review .item div {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
 /* functions */
 .functions {
   text-align: center;
@@ -442,6 +480,19 @@ h2 {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 30px;
+}
+/* form */
+.form input {
+  border: 1px solid grey;
+}
+.form input.error {
+  border: 1px solid red;
+}
+.form .responce_ok {
+  display: none;
+}
+.form .responce_error {
+  display: none;
 }
 .pr {
   position: relative;
